@@ -1,4 +1,4 @@
-## Проект FitLife - MVP версия 1.0
+# Проект FitLife - MVP версия 1.0
 
 
 def fit_life(weight, height):
@@ -42,16 +42,17 @@ def main():
     # TODO: Выведи возраст, ИМТ (округленный до 1 знака) и норму воды.
     print(f'\nПривет, {user_name}!')
 
-    border = '-' * 46
+    border = '-' * 40
     print(
         f'{border}\n'
         f'Отчет для пользователя: {user_name} ({user_age} г.)\n'
         f'Твой Индекс Массы Тела: {round(bmi, 1)}\n'
         f'Рекомендуемая норма воды: {round(water_l, 1)} л. в день\n'
         f'{border}\n'
-        f'Расчет окончен. Будьте здоровы!\n'
+        f'Расчет окончен. Будьте здоровы!\n',
     )
 
 
 if __name__ == '__main__':
     main()
+
