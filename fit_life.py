@@ -25,8 +25,8 @@ def age_adaptation(years):
         return "года"
     else:
         return "лет"
-    
 
+    
 prompt_text = [
     'Напишите ваше имя:\nНапример "Андрей"\n',
     'А теперь возраст:\nДопустим "19"\n',
@@ -65,3 +65,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
