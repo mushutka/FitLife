@@ -26,7 +26,7 @@ def age_adaptation(years):
     else:
         return "лет"
 
-    
+
 prompt_text = [
     'Напишите ваше имя:\nНапример "Андрей"\n',
     'А теперь возраст:\nДопустим "19"\n',
@@ -39,11 +39,10 @@ def main():
     """Запускает опрос пользователя и выводит итоговый фитнес-отчет."""
     # 1. Знакомство
     user_name = input(prompt_text[0]).strip()
-    user_age = int(input(prompt_text[1]))
+    user_age = int(input(prompt_text[1]).strip())
 
-    # 2. Сбор данных
-    user_weight = float(input(prompt_text[2]))
-    user_height = float(input(prompt_text[3]))
+    user_weight = float(input(prompt_text[2]).strip())
+    user_height = float(input(prompt_text[3]).strip())
 
     # Расчет параметров
     bmi, water_l = calculation_index(user_weight, user_height)
@@ -52,17 +51,16 @@ def main():
     # 4. Вывод красивого результата
     # Я скопировал пример вывода из задания по этому там тоже надо исправить. )
     print(f"\nПривет, {user_name}!")
-    border = '-' * 40
+    border = "-" * 40
     print(
-        f'{border}\n'
-        f'Отчет для пользователя: {user_name} ({user_age} {age}.)\n'
-        f'Твой Индекс Массы Тела: {round(bmi, 1)}\n'
-        f'Рекомендуемая норма воды: {round(water_l, 1)} л в день\n'
-        f'{border}\n'
-        f'Расчет окончен. Будьте здоровы!\n',
+        f"{border}\n"
+        f"Отчет для пользователя: {user_name} ({user_age} {age}.)\n"
+        f"Твой Индекс Массы Тела: {round(bmi, 1)}\n"
+        f"Рекомендуемая норма воды: {round(water_l, 1)} л в день\n"
+        f"{border}\n"
+        f"Расчет окончен. Будьте здоровы!\n",
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-    
